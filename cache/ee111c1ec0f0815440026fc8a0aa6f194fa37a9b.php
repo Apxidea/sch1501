@@ -1,3 +1,4 @@
+<?require $_SERVER['DOCUMENT_ROOT'].'/config/config.php';?>
 <header class="top-header">
     <nav class="navbar navbar-expand gap-3">
         <div class="mobile-toggle-icon fs-3">
@@ -26,8 +27,16 @@
                                     <img src="assets/images/avatars/avatar-1.png" alt="" class="rounded-circle"
                                         width="54" height="54">
                                     <div class="ms-3">
-                                        <h6 class="mb-0 dropdown-user-name"><?=$_COOKIE['user_surname']?> <?=$_COOKIE['user_name']?></h6>
-                                        <small class="mb-0 dropdown-user-designation text-secondary"><?=$_COOKIE['user_type']?></small>
+                                        <h6 class="mb-0 dropdown-user-name"><?= $_COOKIE['user_surname'] ?>
+                                            <?= $_COOKIE['user_name'] ?></h6>
+                                        <?php
+                                        $type = $_COOKIE['user_type'];
+                                        $mysql = new mysqli($adress_db, $user_name_db, $passwordm_db, $db_name_db);
+                                        
+                                        $result = $mysql->query("SELECT * FROM user_type WHERE user_type_key = '$type'");
+                                        $user = $result->fetch_assoc(); ?>
+                                        <small
+                                            class="mb-0 dropdown-user-designation text-secondary"><?= $user['user_type_name'] ?></small>
                                     </div>
                                 </div>
                             </a>

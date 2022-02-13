@@ -45,7 +45,7 @@
                       <select id="RegisterType" name="sch_select" class="form-select radius-10" aria-label="Default select example">
                         <option value="sch_1275">Школа №1275</option>
                         <option value="sch_1501">Школа №1501</option>
-                        <option value="sch_1275">Школа №1277</option>
+                        <option value="sch_1277">Школа №1277</option>
                       </select>
                     </div>
                     <div class="col-12">
