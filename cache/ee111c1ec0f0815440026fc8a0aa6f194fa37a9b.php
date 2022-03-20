@@ -17,14 +17,14 @@
                 <li class="nav-item dropdown dropdown-user-setting">
                     <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="" data-bs-toggle="dropdown">
                         <div class="user-setting d-flex align-items-center">
-                            <img src="assets/images/avatars/avatar-1.png" class="user-img" alt="">
+                            <img src="assets/images/avatars/default.svg" class="user-img" alt="">
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li>
-                            <a class="dropdown-item" href="">
+                            <a class="dropdown-item" href="/">
                                 <div class="d-flex align-items-center">
-                                    <img src="assets/images/avatars/avatar-1.png" alt="" class="rounded-circle"
+                                    <img src="assets/images/avatars/default.svg" alt="" class="rounded-circle"
                                         width="54" height="54">
                                     <div class="ms-3">
                                         <h6 class="mb-0 dropdown-user-name"><?= $_COOKIE['user_surname'] ?>
@@ -45,7 +45,7 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="hello-world">
+                            <a class="dropdown-item" href="/">
                                 <div class="d-flex align-items-center">
                                     <div class=""><i class="bi bi-person-fill"></i></div>
                                     <div class="ms-3"><span>Профиль</span></div>
@@ -53,7 +53,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="">
+                            <a class="dropdown-item" href="myworks">
                                 <div class="d-flex align-items-center">
                                     <div class=""><i class="bi bi-receipt"></i></div>
                                     <div class="ms-3"><span>Контрольные работы</span></div>
@@ -61,23 +61,19 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="">
-                                <div class="d-flex align-items-center">
-                                    <div class=""><i class="bi bi-speedometer"></i></div>
-                                    <div class="ms-3"><span>Настройки</span></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="authentication-signup-with-header-footer.html">
-                                <div class="d-flex align-items-center">
-                                    <div class=""><i class="bi bi-lock-fill"></i></div>
-                                    <div class="ms-3"><span>Выйти</span></div>
-                                </div>
-                            </a>
+                            <form action="../module/logout.php" method="POST">
+                                <a class="dropdown-item" href="">
+                                    <div class="d-flex align-items-center">
+                                        <div class=""><i class="bi bi-lock-fill"></i></div>
+                                        <button type="submit" class="transparent">
+                                            <div class="ms-3"><span>Выйти</span></div>
+                                        </button>
+                                    </div>
+                                </a>
+                            </form>
                         </li>
                     </ul>
                 </li>

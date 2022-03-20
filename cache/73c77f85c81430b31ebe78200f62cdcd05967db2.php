@@ -1,6 +1,6 @@
 <?include $_SERVER['DOCUMENT_ROOT'].'/config/config.php';?>
-@extends('layout')
-@section('main_content')
+
+<?php $__env->startSection('main_content'); ?>
     <main class="page-content">
         <div class="row">
             <div class="col-12 col-lg-12 d-flex">
@@ -29,13 +29,15 @@
                             <div class="contact-block">
                                 <div class="d-flex justify-content-between flex-wrap mt-3 align-items-center">
                                     <span style="font-size: 20px" class="text-muted fw-bold">E-mail</span>
-                                    <div style="font-size: 20px" class="fs-14px fw-bolder"> {{ $_COOKIE['user_email'] }}
+                                    <div style="font-size: 20px" class="fs-14px fw-bolder"> <?php echo e($_COOKIE['user_email']); ?>
+
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="d-flex justify-content-between flex-wrap mt-2 align-items-center">
                                     <span style="font-size: 20px" class="text-muted fw-bold">Номер телефона</span>
-                                    <div style="font-size: 20px" class="fs-14px fw-bolder"> {{ $_COOKIE['user_phone'] }}
+                                    <div style="font-size: 20px" class="fs-14px fw-bolder"> <?php echo e($_COOKIE['user_phone']); ?>
+
                                     </div>
                                 </div>
                                 <hr>
@@ -57,4 +59,6 @@
             </div>
         </div>
     </main>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

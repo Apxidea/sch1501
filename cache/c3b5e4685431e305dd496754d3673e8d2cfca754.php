@@ -14,16 +14,33 @@
      <ul class="metismenu" id="menu">
          <li>
              <a href="/<?= $_COOKIE['user_phone'] ?>">
-                 <div class="parent-icon"><i class="bi bi-person-fill"></i>
+                 <div class="parent-icon"><i class="bi bi-person"></i>
                  </div>
                  <div class="menu-title">Профиль</div>
              </a>
          </li>
+         <?php if($_COOKIE['user_type'] == "user_admin"): ?>
          <li>
-             <a href="/works">
+             <a href="/allworks">
                  <div class="parent-icon"><i class="bi bi-receipt"></i>
                  </div>
-                 <div class="menu-title">Контрольные работы</div>
+                 <div class="menu-title">Все Работы</div>
+             </a>
+         </li>
+         <? else: ?>
+         <li>
+             <a href="/myworks">
+                 <div class="parent-icon"><i class="bi bi-receipt"></i>
+                 </div>
+                 <div class="menu-title">Мои Работы</div>
+             </a>
+         </li>
+         <? endif; ?>
+         <li>
+             <a href="/add_work">
+                 <div class="parent-icon"><i class="bi bi-journal-plus"></i>
+                 </div>
+                 <div class="menu-title">Добавить работу</div>
              </a>
          </li>
      </ul>

@@ -47,7 +47,6 @@
                                     
                                     $result = $mysql->query("SELECT * FROM school WHERE sch_name_key = '$type'");
                                     $user = $result->fetch_assoc(); ?>
-                                    ?>
                                     <div style="font-size: 16px" class="fs-14px fw-bolder"> <?= $user['sch_name_name'] ?>
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
 <?include $_SERVER['DOCUMENT_ROOT'].'/config/config.php';?>
-@extends('layout')
-@section('main_content')
+
+<?php $__env->startSection('main_content'); ?>
 <main class="authentication-content">
   <div class="container-fluid">
     <div class="authentication-card">
@@ -77,10 +77,7 @@
                     <div class="col-12">
                       <div class="d-grid">
                         <button id="but-act" id="regbutton" type="submit" class="btn btn-primary radius-10">Регистрация</button>
-                        {{-- <button id="but-dis" class="btn btn-primary radius-10" type="button" disabled>
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                            Регистрация, пожалуйста подождите...
-                        </button> --}}
+                        
                       </div>
                     </div>
                     <div class="col-12">
@@ -96,4 +93,6 @@
   </div>
  </main>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

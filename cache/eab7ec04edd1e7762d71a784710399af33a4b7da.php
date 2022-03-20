@@ -1,6 +1,4 @@
-<?include $_SERVER['DOCUMENT_ROOT'].'/config/config.php';?>
-@extends('layout')
-@section('main_content')
+<?php $__env->startSection('main_content'); ?>
 <main class="authentication-content">
   <div class="container-fluid">
     <div class="authentication-card">
@@ -12,13 +10,13 @@
           <div class="col-lg-6">
             <div id="regftext" class="card-body p-4 p-sm-5">
               <h5 class="card-title">Регистрация</h5>
-              <form class="form-body" method="POST" action="../module/registration.php" id="registerForm">
+              <form class="form-body" method="POST" action="../module/registration.php" id="registerForm"> 
                   <div class="row g-3">
                     <div class="col-12">
-                      <!-- <select id="RegisterType" name="top_select" class="form-select radius-10" aria-label="Default select example">
+                      <select id="RegisterType" name="top_select" class="form-select radius-10" aria-label="Default select example">
                         <option value="user_teacher">Учитель</option>
                         <option value="user_admin">Администратор</option>
-                      </select> -->
+                      </select>
                     </div>
                     <div class="col-12">
                       <label for="inputEmailAddress" class="form-label">Фамилия</label>
@@ -44,12 +42,9 @@
                     <div class="col-12" id="city_register">
                       <label for="inputEmailAddress" class="form-label">Школа</label>
                       <select id="RegisterType" name="sch_select" class="form-select radius-10" aria-label="Default select example">
-                        <option value="sch_1">Тихвинский переулок, дом 3</option>
-                        <option value="sch_2">Долгоруковская улица, дом 6, строение 2</option>
-                        <option value="sch_3">Сущёвская улица, дом 32</option>
-                        <option value="sch_4">улица Достоевского, дом 25, строение 1</option>
-                        <option value="sch_5">Тихвинская улица, дом 39, строение 2</option>
-                        <option value="sch_6">3-й Самотёчный переулок, дом 14, строение 1</option>
+                        <option value="sch_1275">Школа №1275</option>
+                        <option value="sch_1501">Школа №1501</option>
+                        <option value="sch_1277">Школа №1277</option>
                       </select>
                     </div>
                     <div class="col-12">
@@ -77,10 +72,7 @@
                     <div class="col-12">
                       <div class="d-grid">
                         <button id="but-act" id="regbutton" type="submit" class="btn btn-primary radius-10">Регистрация</button>
-                        {{-- <button id="but-dis" class="btn btn-primary radius-10" type="button" disabled>
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                            Регистрация, пожалуйста подождите...
-                        </button> --}}
+                        
                       </div>
                     </div>
                     <div class="col-12">
@@ -96,4 +88,5 @@
   </div>
  </main>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

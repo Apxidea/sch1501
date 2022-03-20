@@ -1,13 +1,13 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
+require '../config/config.php';
 
 $user_type = $_POST['top_select'];
 $user_email = $_POST['email'];
 $user_password = $_POST['password'];
 
-$mysql = new mysqli($adress_db, $user_name_db, $passwordm_db, $db_name_db);
+$mysql = new mysqli($adress_db, $user_name_db, $password_db, $db_name_db);
 
-$result = $mysql->query("SELECT * FROM users WHERE user_email = 
+$result = $mysql->query("SELECT * FROM users WHERE user_email =
 '$user_email' AND user_password = '$user_password' AND user_type = '$user_type'");
 $user = $result->fetch_assoc();
 
